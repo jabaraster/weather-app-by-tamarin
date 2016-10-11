@@ -8,7 +8,7 @@ namespace WeatherApp
 		{
 			InitializeComponent();
 
-			MainPage = new WeatherAppPage();
+			MainPage = new WeatherPage();
 		}
 
 		protected override void OnStart()

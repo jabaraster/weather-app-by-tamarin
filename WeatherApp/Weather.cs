@@ -8,7 +8,7 @@ namespace WeatherApp
 		public string Wind { get; set; }
 		public string Humidity { get; set; }
 		public string Visibility { get; set; }
-		public string Sunrise { get; set; }
-		public string Sunset { get; set; }
+		public DateTime Sunrise { get; set; }
+		public DateTime Sunset { get; set; }
 	}
 }
