@@ -22,30 +22,18 @@ namespace WeatherApp
 		public WeatherPage()
 		{
 			InitializeComponent();
-			Content = new StackLayout
+			this.BackgroundColor = Color.FromRgb((250, 250, 210);
+
+			this.Content = new StackLayout
 			{
 				Spacing = 4,
 				BackgroundColor = Color.FromRgb(25, 250, 210),
 				VerticalOptions = LayoutOptions.CenterAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 				Children = {
-					new Label
-					{
-						Text = "An Expand option allows o",
-								VerticalOptions = LayoutOptions.CenterAndExpand,
-								HorizontalOptions = LayoutOptions.End,
-						BackgroundColor = Color.Gray,
-					},
 					this.zipCodeText,
 					this.weatherGetter,
 				},
-			};
-			Content = new Label
-			{
-				Text = "Hello, Forms!",
-				VerticalOptions = LayoutOptions.CenterAndExpand,
-				HorizontalOptions = LayoutOptions.CenterAndExpand,
-				BackgroundColor = Color.FromRgb(250, 250, 210),
 			};
 
 			this.weatherGetter.Clicked += WeatherGetter_Clicked;
