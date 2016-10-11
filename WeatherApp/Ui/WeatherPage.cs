@@ -59,7 +59,7 @@ namespace WeatherApp.Ui
 				this.indicator.IsRunning = true;
 				var weather = await Core.GetWeather(this.zipCodeText.Text);
 				if (weather == null) return;
-				this.jsonText.Text = JsonConvert.SerializeObject(weather);
+				this.jsonText.Text = JsonConvert.SerializeObject(weather, Formatting.Indented);
 			}
 			finally
 			{

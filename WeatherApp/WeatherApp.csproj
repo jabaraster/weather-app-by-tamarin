@@ -39,6 +39,7 @@
     <Compile Include="Lib\Core.cs" />
     <Compile Include="Lib\Weather.cs" />
     <Compile Include="Ui\Page2.cs" />
+    <Compile Include="Ui\Page3.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

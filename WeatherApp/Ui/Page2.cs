@@ -18,7 +18,7 @@ namespace WeatherApp.Ui
 			this.ToolbarItems.Add(new ToolbarItem
 			{
 				Text = "進む",
-				Command = new Command(() => this.Navigation.PushAsync(new Page2())),
+				Command = new Command(() => this.Navigation.PushAsync(new Page3(this))),
 			});
 		}
 	}
