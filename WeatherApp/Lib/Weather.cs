@@ -1,5 +1,6 @@
 ﻿using System;
-namespace WeatherApp
+
+namespace WeatherApp.Lib
 {
 	public class Weather
 	{

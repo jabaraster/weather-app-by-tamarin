@@ -1,35 +1,33 @@
 ﻿using System;
 using Xamarin.Forms;
 using Newtonsoft.Json;
+using WeatherApp.Lib;
 
-namespace WeatherApp
+namespace WeatherApp.Ui
 {
-	public partial class WeatherPage : ContentPage
+	public class WeatherPage : ContentPage
 	{
-		private Editor zipCodeText = new Editor
+		Editor zipCodeText = new Editor
 		{
 			Text = "860-0047",
 			HorizontalOptions = LayoutOptions.FillAndExpand,
 		};
-		private Button weatherGetter = new Button
+		Button weatherGetter = new Button
 		{
 			Text = "検索",
 			HorizontalOptions = LayoutOptions.Fill,
 		};
-		private Editor jsonText = new Editor
+		Editor jsonText = new Editor
 		{
 			TextColor = Color.Blue,
 			HorizontalOptions = LayoutOptions.FillAndExpand,
 			VerticalOptions = LayoutOptions.FillAndExpand,
 		};
-		private ActivityIndicator indicator = new ActivityIndicator();
+		ActivityIndicator indicator = new ActivityIndicator
+		{ };
 
-		/// <summary>
-		/// Initializes a new instance of the <see cref="T:WeatherApp.WeatherPage"/> class.
-		/// </summary>
 		public WeatherPage()
 		{
-			InitializeComponent();
 			this.BackgroundColor = Color.FromRgb(250, 250, 210);
 
 			this.Content = new StackLayout
@@ -43,8 +41,15 @@ namespace WeatherApp
 					this.jsonText,
 				},
 			};
-			this.weatherGetter.Clicked += WeatherGetter_Clicked;
 
+			this.ToolbarItems.Add(new ToolbarItem
+			{
+				Text = "進む",
+				Command = new Command(() => this.Navigation.PushAsync(new Page2())),
+			});
+
+
+			this.weatherGetter.Clicked += WeatherGetter_Clicked;
 		}
 
 		async void WeatherGetter_Clicked(object sender, EventArgs e)
@@ -63,3 +68,4 @@ namespace WeatherApp
 		}
 	}
 }
+

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace WeatherApp
+namespace WeatherApp.Lib
 {
 	public class Core
 	{
