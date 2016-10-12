@@ -9,7 +9,7 @@ namespace WeatherApp.Lib
 			if (zipCode == null || zipCode.Trim().Length == 0) return null;
 
 			var url = "http://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + ",jp&units=imperial&appid=293fb240d3ccbfe47c78f3249a276da5";
-			var json = await DataService.getDataFromService(url);
+			var json = await DataService.getJsonFromService(url);
 			var ret = new Weather();
 			ret.Title = (string)json["name"];
 			ret.Temperature = json["main"]["temp"] + " F";

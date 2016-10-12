@@ -3,11 +3,11 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace WeatherApp
+namespace WeatherApp.Lib
 {
 	public class DataService
 	{
-		public static async Task<JObject> getDataFromService(string url)
+		public static async Task<JObject> getJsonFromService(string url)
 		{
 			var response = await new HttpClient().GetAsync(url);
 			if (response == null) return null;
